@@ -79,10 +79,10 @@ gulp.task 'images', ->
     .pipe gulp.dest "#{DIST_DIR}/images"
 
 gulp.task 'svg', ->
-  gulp.src "#{paths.svg}/map.svg"
+  gulp.src "#{paths.svg}/*.svg"
     .pipe svgmin()
-    .pipe svgstore({ prefix: 'svg-', inlineSvg: true })
-    .pipe gulp.dest paths.svg
+    .pipe svgstore({ prefix: 'icon-', inlineSvg: true })
+    .pipe gulp.dest 'templates/partials'
 
 gulp.task 'copy', ['build'], (cb) ->
   gulp.src paths.pages.concat(paths.images).concat(paths.svg), {base: "build"}
