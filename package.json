@@ -4,7 +4,8 @@
     "modal": "./contents/vendor/css-modal/modal.js",
     "froogaloop": "./contents/vendor/vimeo/froogaloop.js",
     "carousel": "./contents/vendor/owl-carousel/owl-carousel/owl.carousel.js",
-    "chosen": "./contents/vendor/chosen_v1.1.0/chosen.jquery.js"
+    "chosen": "./contents/vendor/chosen_v1.1.0/chosen.jquery.js",
+    "retina": "./contents/vendor/retinajs/src/retina.js"
   },
   "browserify-shim": {
     "jquery": "$",
