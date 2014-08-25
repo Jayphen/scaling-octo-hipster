@@ -2,6 +2,8 @@ extends layout
 
 block content
 
+  include partials/svg
+
   section.hero
     nav.hero-nav
       .hero-logo
@@ -101,7 +103,9 @@ block content
       h1.section-heading Contact us
 
       .location
-        img(src="images/map.png")
+        //- img(src="images/map.png")
+        svg.map
+          use(xlink:href="#svg-map")
 
         .location-address
           strong HQ

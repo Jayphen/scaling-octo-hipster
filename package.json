@@ -30,6 +30,8 @@
     "gulp-concat": "^2.3.4",
     "gulp-cssshrink": "^0.1.4",
     "gulp-image": "^0.4.3",
+    "gulp-svgmin": "^0.4.6",
+    "gulp-svgstore": "^1.0.1",
     "gulp-uglify": "^0.3.1",
     "gulp-uncss": "^0.4.5",
     "run-sequence": "^0.3.6",
