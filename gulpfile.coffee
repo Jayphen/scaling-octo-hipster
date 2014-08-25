@@ -43,7 +43,7 @@ ghpages =
   push: true
 
 gulp.task 'clean', ->
-  gulp.src([BUILD_DIR, DIST_DIR], { read: false })
+  gulp.src([BUILD_DIR], { read: false })
     .pipe clean()
 
 gulp.task 'build', ['clean'], (cb) ->

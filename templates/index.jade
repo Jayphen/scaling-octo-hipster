@@ -62,13 +62,13 @@ block content
       a.employer-cta-btn(href="#") Sign up now
       .employer-learn-more You can also use PeerBrief to <a href="http://peerbrief.com/enterprise/">supercharge your internal referral programme.</a>
 
-  section.partners
-    h1.section-heading A few of our awesome partners
-
-    ul.partner-logos
-      each name in ['33talent-logo.png', 'adobe-logo.png', 'jobadvisor-logo.png', 'mycause-logo.png', 'redballoon-logo.png']
+  section.seen-on
+    h1.section-heading As seen on
+    ul.seen-on-list
+      each name in ['afr-logo.png', 'brw-logo.png', 'smh-logo.png', 'startupsmart-logo.png']
         li
-          img(src="images/logos/#{name}")
+          a(href="#")
+            img(src="images/logos/#{name}")
 
   mixin team(name, pos)
     - var sanitisedName = name.toLowerCase().replace(/\s+/g, '')
@@ -109,6 +109,17 @@ block content
             |Meet the team
             svg
               use(xlink:href="#icon-arrow")
+
+
+
+  section.partners
+    h1.section-heading Our awesome partners
+
+    ul.partner-logos
+      each name in ['33talent-logo.png', 'jobadvisor-logo.png', 'mycause-logo.png', 'redballoon-logo.png']
+        li
+          a(href="#")
+            img(src="images/logos/#{name}")
 
   section.contact
     .contact-inner
