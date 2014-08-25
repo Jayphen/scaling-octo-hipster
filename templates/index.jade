@@ -7,7 +7,8 @@ block content
   section.hero
     nav.hero-nav
       .hero-logo
-        img(src="images/peerbrief-logo.png")
+        svg
+          use(xlink:href="#icon-logo")
       .hero-login
         a.hero-login-btn(href="https://app-qa.peerbrief.com") Log In
 
@@ -16,7 +17,11 @@ block content
       h2.hero-subline Invite friends, find them jobs, earn money.
 
     .hero-cta
-      a.hero-cta-btn(href="#invite-modal") Request your invite
+      a.hero-cta-btn(href="#invite-modal")
+        | Request your invite
+
+        svg
+          use(xlink:href="#icon-arrow")
 
   section.hiw
     h1.hiw-title How does it work?
@@ -87,7 +92,10 @@ block content
           +team('Francis Coady', 'Head of Marcoms')
 
         .team-controls
-          a(href="#carousel") Meet our advisors
+          a(href="#carousel")
+            |Meet our advisors
+            svg
+              use(xlink:href="#icon-arrow")
 
       div
         h1.section-heading Meet our advisors
@@ -97,7 +105,10 @@ block content
           +team('David Gray', 'Channels/Partners Advisor')
 
         .team-controls
-          a(href="#carousel") Meet the team
+          a(href="#carousel")
+            |Meet the team
+            svg
+              use(xlink:href="#icon-arrow")
 
   section.contact
     .contact-inner
@@ -130,7 +141,8 @@ block content
   section.footer
     .footer-inner
       .footer-links
-        img(src="images/peerbrief-logo.png", height="20")
+        svg
+          use(xlink:href="#icon-logo")
         p PeerBrief is a revolutionary crowd sourcing referral platform that lets you earn cash from one of the most valuable assets you have — your network.
       .footer-links
         .footer-heading Company
