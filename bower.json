@@ -19,7 +19,8 @@
   ],
   "devDependencies": {
     "normalize-styl": "*",
-    "jquery-1.11.1": "http://code.jquery.com/jquery-1.11.1.js"
+    "jquery-1.11.1": "http://code.jquery.com/jquery-1.11.1.js",
+    "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
   },
   "dependencies": {
     "css-modal": "~1.1.8",
