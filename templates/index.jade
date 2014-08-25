@@ -7,7 +7,7 @@ block content
       .hero-logo
         img(src="images/peerbrief-logo.png")
       .hero-login
-        a.hero-login-btn(href="#") Log In
+        a.hero-login-btn(href="https://app-qa.peerbrief.com") Log In
 
     header.hero-intro
       h1.hero-callout Get paid for who you know
@@ -45,14 +45,15 @@ block content
 
     .hiw-cta
       a.hiw-cta-btn(href="#invite-modal") Get started
-      a.hiw-learn-more(href="#") Want to learn more?
+      //- a.hiw-learn-more(href="https://peerbrief.zendesk.com/hc/en-us/sections/200345640-Referrer") Want to learn more?
 
   section.employers
     h1.section-heading For employers
-    p Use the power of crowdsourcing to find your staff. It's free to join and it's free to post jobs! You can also use PeerBrief to <a href="#">supercharge your internal referral programme.</a>
+    p Use the power of crowdsourcing to find your staff. It's free to join and it's free to post jobs! <a href="#employer-lm">Learn more</a>
 
     .employer-cta
       a.employer-cta-btn(href="#") Sign up now
+      .employer-learn-more You can also use PeerBrief to <a href="http://peerbrief.com/enterprise/">supercharge your internal referral programme.</a>
 
   section.partners
     h1.section-heading A few of our awesome partners
@@ -175,3 +176,4 @@ block content
 
   include partials/vid-modal
   include partials/invite
+  include partials/employer-learn-more
