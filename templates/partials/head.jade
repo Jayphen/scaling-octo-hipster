@@ -8,6 +8,7 @@ head
     link(rel="stylesheet", href="vendor/owl-carousel/owl-carousel/owl.transitions.css")
     link(rel="stylesheet", href="vendor/chosen_v1.1.0/chosen.css")
   link(rel="stylesheet", href="styles/main.css")
-  link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600")
+  unless env.mode == 'preview'
+    link(rel="stylesheet", href="//cloud.typography.com/6530072/651564/css/fonts.css")
   title= locals.title
   body

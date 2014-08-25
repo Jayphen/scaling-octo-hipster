@@ -25,7 +25,8 @@ paths =
   styles: [
     "contents/vendor/css-modal/build/modal.css",
     "contents/vendor/owl-carousel/owl-carousel/owl.carousel.css",
-    "contents/vendor/owl-carousel/owl-carousel/owl.transitions.css"
+    "contents/vendor/owl-carousel/owl-carousel/owl.transitions.css",
+    "contents/vendor/chosen_v1.1.0/chosen.css",
     "#{BUILD_DIR}/styles/main.css"
   ]
   images: "#{BUILD_DIR}/images/**/*"
