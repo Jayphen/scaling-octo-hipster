@@ -7,6 +7,8 @@ uncss           = require 'gulp-uncss'
 image           = require 'gulp-image'
 deploy          = require 'gulp-gh-pages'
 concat          = require 'gulp-concat'
+svgstore        = require 'gulp-svgstore'
+svgmin          = require 'gulp-svgmin'
 
 BUILD_DIR       = 'build'
 CONTENT_DIR     = 'contents'
@@ -35,6 +37,7 @@ paths =
     "#{BUILD_DIR}/about/index.html"
   ]
   dist: "dist/**/*"
+  svg: "contents/svg"
 
 ghpages =
   push: true
@@ -75,8 +78,14 @@ gulp.task 'images', ->
     .pipe image()
     .pipe gulp.dest "#{DIST_DIR}/images"
 
+gulp.task 'svg', ->
+  gulp.src "#{paths.svg}/map.svg"
+    .pipe svgmin()
+    .pipe svgstore({ prefix: 'svg-', inlineSvg: true })
+    .pipe gulp.dest paths.svg
+
 gulp.task 'copy', ['build'], (cb) ->
-  gulp.src paths.pages.concat(paths.images), {base: "build"}
+  gulp.src paths.pages.concat(paths.images).concat(paths.svg), {base: "build"}
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
