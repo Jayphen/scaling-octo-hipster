@@ -23,7 +23,7 @@
     "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
     "retinajs": "~1.3.0",
     "html5shiv": "~3.7.2",
-    "selectivizr": "~1.0.2"
+    "svg4everybody": "*"
   },
   "dependencies": {
     "css-modal": "~1.1.8",

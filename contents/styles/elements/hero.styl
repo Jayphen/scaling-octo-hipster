@@ -5,6 +5,9 @@
   color: white
   position: relative
 
+  .lt-ie9 &
+    background: url('../images/ie8-people-bg.jpg')
+
   +below(800px)
     adjust-font-size-to: 14px
     padding-left: 0.5em
@@ -24,6 +27,9 @@
     background: alpha(blue, 85%)
     content: ""
     pointer-events: none
+
+    .lt-ie9 &
+      display: none
 
 .hero-intro
   text-align: center
@@ -75,6 +81,8 @@
 
 .hero-cta-btn
   btn(alpha(#212121, 0.9))
+  .lt-ie9 &
+    btn(#212121)
   &:hover
     background: black
   svg

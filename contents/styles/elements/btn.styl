@@ -49,6 +49,8 @@ btn-secondary(background=silver, color=grey, alpha = false)
 
     if alpha == true
       background: alpha(background, 90%)
+      .lt-ie9 &
+        background: lighten(background, 10%)
 
   svg
     fill: color

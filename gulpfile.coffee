@@ -24,8 +24,8 @@ paths =
   scripts: [
     "#{BUILD_DIR}/js/main.js",
     "#{BUILD_DIR}/js/foot.js",
-    "contents/vendor/html5shiv/dist/html5shiv.min.js",
-    "contents/vendor/selectivizr/selectivizr.js"
+    "contents/vendor/html5shiv/dist/html5shiv.min.js"
+    "contents/vendor/svg4everybody/svg4everybody.ie8.min.js"
   ]
   styles: [
     "contents/vendor/css-modal/build/modal.css",
@@ -42,7 +42,9 @@ paths =
     "#{BUILD_DIR}/about/index.html"
   ]
   dist: "dist/**/*"
-  svg: "contents/svg/src"
+  svg:
+    build: "contents/svg"
+    prebuild: "contents/svg/src"
 
 ghpages =
   push: true
@@ -84,14 +86,14 @@ gulp.task 'images', ['copy'], ->
     .pipe image()
     .pipe gulp.dest "#{DIST_DIR}/images"
 
-gulp.task 'svg', ['copy'], ->
-  gulp.src "#{paths.svg}/*.svg"
+gulp.task 'svg', ->
+  gulp.src "#{paths.svg.prebuild}/*.svg"
     .pipe svgmin()
     .pipe svgstore({ prefix: 'icon-', inlineSvg: true })
-    .pipe gulp.dest paths.svg
+    .pipe gulp.dest paths.svg.build
 
-gulp.task 'copy', ['build'], (cb) ->
-  gulp.src paths.pages.concat(paths.svg), {base: "build"}
+gulp.task 'copy', ['build', 'svg'], (cb) ->
+  gulp.src paths.pages.concat(["build/svg/*"]), {base: "build"}
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
