@@ -23,7 +23,9 @@ config =
 paths =
   scripts: [
     "#{BUILD_DIR}/js/main.js",
-    "#{BUILD_DIR}/js/foot.js"
+    "#{BUILD_DIR}/js/foot.js",
+    "contents/vendor/html5shiv/dist/html5shiv.min.js",
+    "contents/vendor/selectivizr/selectivizr.js"
   ]
   styles: [
     "contents/vendor/css-modal/build/modal.css",
@@ -40,7 +42,7 @@ paths =
     "#{BUILD_DIR}/about/index.html"
   ]
   dist: "dist/**/*"
-  svg: "contents/svg"
+  svg: "contents/svg/src"
 
 ghpages =
   push: true
@@ -86,7 +88,7 @@ gulp.task 'svg', ['copy'], ->
   gulp.src "#{paths.svg}/*.svg"
     .pipe svgmin()
     .pipe svgstore({ prefix: 'icon-', inlineSvg: true })
-    .pipe gulp.dest 'templates/partials'
+    .pipe gulp.dest paths.svg
 
 gulp.task 'copy', ['build'], (cb) ->
   gulp.src paths.pages.concat(paths.svg), {base: "build"}

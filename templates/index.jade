@@ -2,13 +2,11 @@ extends layout
 
 block content
 
-  include partials/svg
-
   section.hero
     nav.hero-nav
       .hero-logo
         svg
-          use(xlink:href="#icon-logo")
+          use(xlink:href="svg/svgstore.svg#icon-logo")
       .hero-login
         a.hero-login-btn(href="https://app-qa.peerbrief.com") Log In
 
@@ -21,7 +19,7 @@ block content
         | Request your invite
 
         svg
-          use(xlink:href="#icon-arrow")
+          use(xlink:href="svg/svgstore.svg#icon-arrow")
 
   section.hiw
     h1.hiw-title How does it work?
@@ -94,7 +92,7 @@ block content
           a(href="#carousel")
             |Meet our advisors
             svg
-              use(xlink:href="#icon-arrow")
+              use(xlink:href="svg/svgstore.svg#icon-arrow")
 
       div
         h1.section-heading Meet our advisors
@@ -107,7 +105,7 @@ block content
           a(href="#carousel")
             |Meet the team
             svg
-              use(xlink:href="#icon-arrow")
+              use(xlink:href="svg/svgstore.svg#icon-arrow")
 
 
 
