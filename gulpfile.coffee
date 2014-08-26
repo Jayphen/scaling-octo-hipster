@@ -69,7 +69,7 @@ gulp.task 'styles', ['copy'], ->
     .pipe concat 'main.css'
     .pipe uncss(
       html: paths.pages
-      ignore: [/modal/, /overlay/, /owl/, /grabbing/]
+      ignore: [/modal/, /overlay/, /owl/, /grabbing/, /ie9/]
       ignoreSheets: [/fonts.googleapis/, /modal.css/]
     )
     .pipe cssshrink()
