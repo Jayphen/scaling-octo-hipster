@@ -65,10 +65,9 @@ block content
   section.seen-on
     h1.section-heading As seen on
     ul.seen-on-list
-      each name in ['afr-logo.png', 'brw-logo.png', 'smh-logo.png', 'startupsmart-logo.png']
+      each name in ['skynews-logo.png', 'afr-logo.png', 'brw-logo.png', 'smh-logo.png', 'startupsmart-logo.png']
         li
-          a(href="#")
-            img(src="images/logos/#{name}")
+          img(src="images/logos/#{name}")
 
   mixin team(name, pos)
     - var sanitisedName = name.toLowerCase().replace(/\s+/g, '')
@@ -118,8 +117,7 @@ block content
     ul.partner-logos
       each name in ['33talent-logo.png', 'jobadvisor-logo.png', 'mycause-logo.png', 'redballoon-logo.png']
         li
-          a(href="#")
-            img(src="images/logos/#{name}")
+          img(src="images/logos/#{name}")
 
   section.contact
     .contact-inner
