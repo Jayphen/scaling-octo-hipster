@@ -57,7 +57,7 @@ gulp.task 'default', ->
   runWintersmith.settings.configFile = config.dev
   runWintersmith.preview()
 
-gulp.task 'styles', ->
+gulp.task 'styles', ['copy'], ->
   gulp.src paths.styles
     .pipe concat 'main.css'
     .pipe uncss(
@@ -68,12 +68,12 @@ gulp.task 'styles', ->
     .pipe cssshrink()
     .pipe gulp.dest "#{DIST_DIR}/styles"
 
-gulp.task 'js', ->
+gulp.task 'js', ['copy'], ->
   gulp.src paths.scripts
     .pipe uglify()
     .pipe gulp.dest "#{DIST_DIR}/js"
 
-gulp.task 'images', ->
+gulp.task 'images', ['copy'], ->
   gulp.src paths.images
     .pipe image()
     .pipe gulp.dest "#{DIST_DIR}/images"
@@ -89,12 +89,8 @@ gulp.task 'copy', ['build'], (cb) ->
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
-gulp.task 'gh', (cb) ->
-  gulp.src paths.dist
-    .pipe deploy(ghpages)
-
 gulp.task 'min', ['styles', 'images', 'js']
 
-gulp.task 'dist', ['copy'], ->
-  gulp.start 'min'
-
+gulp.task 'gh', ['min'], () ->
+  gulp.src paths.dist
+    .pipe deploy(ghpages)
