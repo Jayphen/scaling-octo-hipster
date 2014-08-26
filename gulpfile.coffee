@@ -78,7 +78,7 @@ gulp.task 'images', ['copy'], ->
     .pipe image()
     .pipe gulp.dest "#{DIST_DIR}/images"
 
-gulp.task 'svg', ->
+gulp.task 'svg', ['copy'], ->
   gulp.src "#{paths.svg}/*.svg"
     .pipe svgmin()
     .pipe svgstore({ prefix: 'icon-', inlineSvg: true })
@@ -89,7 +89,7 @@ gulp.task 'copy', ['build'], (cb) ->
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
-gulp.task 'min', ['styles', 'images', 'js']
+gulp.task 'min', ['svg', 'styles', 'images', 'js']
 
 gulp.task 'gh', ['min'], () ->
   gulp.src paths.dist
