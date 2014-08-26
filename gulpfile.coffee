@@ -24,7 +24,7 @@ paths =
   scripts: [
     "#{BUILD_DIR}/js/main.js",
     "#{BUILD_DIR}/js/foot.js",
-    "contents/vendor/html5shiv/dist/html5shiv.min.js"
+    "contents/vendor/html5shiv/dist/html5shiv.min.js",
     "contents/vendor/svg4everybody/svg4everybody.ie8.min.js"
   ]
   styles: [
@@ -68,7 +68,7 @@ gulp.task 'styles', ['copy'], ->
   gulp.src paths.styles
     .pipe concat 'main.css'
     .pipe uncss(
-      html: paths.pages,
+      html: paths.pages
       ignore: [/modal/, /overlay/, /owl/, /grabbing/]
       ignoreSheets: [/fonts.googleapis/, /modal.css/]
     )
