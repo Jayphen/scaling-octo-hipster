@@ -89,7 +89,7 @@ gulp.task 'svg', ['copy'], ->
     .pipe gulp.dest 'templates/partials'
 
 gulp.task 'copy', ['build'], (cb) ->
-  gulp.src paths.pages.concat(paths.images.prebuild).concat(paths.svg), {base: "build"}
+  gulp.src paths.pages.concat(paths.svg), {base: "build"}
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
