@@ -29,6 +29,7 @@
     "wintersmith-stylus": "~0.4.1"
   },
   "devDependencies": {
+    "gulp-changed": "^1.0.0",
     "gulp-concat": "^2.3.4",
     "gulp-cssshrink": "^0.1.4",
     "gulp-gh-pages": "^0.3.3",

@@ -9,6 +9,7 @@ deploy          = require 'gulp-gh-pages'
 concat          = require 'gulp-concat'
 svgstore        = require 'gulp-svgstore'
 svgmin          = require 'gulp-svgmin'
+changed         = require 'gulp-changed'
 
 BUILD_DIR       = 'build'
 CONTENT_DIR     = 'contents'
@@ -31,7 +32,9 @@ paths =
     "contents/vendor/chosen_v1.1.0/chosen.css",
     "#{BUILD_DIR}/styles/main.css"
   ]
-  images: "#{BUILD_DIR}/images/**/*"
+  images:
+    build: "#{BUILD_DIR}/images/**/*"
+    prebuild: "contents/images/**/*"
   pages: [
     "#{BUILD_DIR}/index.html",
     "#{BUILD_DIR}/about/index.html"
@@ -74,7 +77,8 @@ gulp.task 'js', ['copy'], ->
     .pipe gulp.dest "#{DIST_DIR}/js"
 
 gulp.task 'images', ['copy'], ->
-  gulp.src paths.images
+  gulp.src paths.images.prebuild
+    .pipe changed "#{DIST_DIR}/images"
     .pipe image()
     .pipe gulp.dest "#{DIST_DIR}/images"
 
@@ -85,7 +89,7 @@ gulp.task 'svg', ['copy'], ->
     .pipe gulp.dest 'templates/partials'
 
 gulp.task 'copy', ['build'], (cb) ->
-  gulp.src paths.pages.concat(paths.images).concat(paths.svg), {base: "build"}
+  gulp.src paths.pages.concat(paths.images.prebuild).concat(paths.svg), {base: "build"}
     .pipe gulp.dest "#{DIST_DIR}"
   cb()
 
