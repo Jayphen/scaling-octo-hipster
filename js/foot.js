@@ -75,7 +75,7 @@ $(function() {
     $this = $(this);
     category = $this.data('ga-category');
     label = $this.data('ga-label');
-    if (typeof window.ga === !'undefined') {
+    if (typeof window.ga !== 'undefined') {
       return ga('send', 'event', category, 'Click', label);
     } else {
       return console.log(JSON.stringify($this.data(), null, ' '));
