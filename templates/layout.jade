@@ -14,6 +14,13 @@ html
   include partials/head
   body
     block content
+
+    unless env.mode == 'preview'
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-50029273-1', 'peerbrief.com');
+        ga('send', 'pageview');
+
     <!--[if lt IE 9]>
     script(src="//cdnjs.cloudflare.com/ajax/libs/bean/1.0.14/bean.min.js")
     <![endif]-->
@@ -22,8 +29,3 @@ html
     script(src="//cdn.jsdelivr.net/nwmatcher/1.2.5/nwmatcher.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js")
     <![endif]-->
-    unless env.mode == 'preview'
-      script.
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-50029273-1', 'peerbrief.com');
-        ga('send', 'pageview');
