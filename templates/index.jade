@@ -66,12 +66,14 @@ block content
         li
           img(src="images/logos/#{name}")
 
-  mixin team(name, pos)
+  mixin team(name, pos, advisory)
     - var sanitisedName = name.toLowerCase().replace(/\s+/g, '')
+    - var url = advisory ? "http://peerbrief.com/advisory/" : "http://peerbrief.com/meet-the-team/"
     li.team-member
-      img(src="images/team/#{sanitisedName}.jpg")
-      .team-member-name!= name
-      .team-member-position!= pos
+      a(href=url)
+        img(src="images/team/#{sanitisedName}.jpg")
+        .team-member-name!= name
+        .team-member-position!= pos
 
   section.team
 
@@ -82,9 +84,9 @@ block content
           +team('Rob Fanshawe', 'CEO')
           +team('Kristian Kauper', 'CTO')
           +team('Rajan Rauniyar', 'Back-end Developer')
+          +team('Gabriella Lagerstedt', 'Front-end Developer')
           +team('Jayphen Simpson', 'UX/UI Design')
-          +team('Luke Westland', 'Advisor')
-          +team('Alex Kerr', 'Consultant')
+          +team('Alex Kerr', 'Digital Consultant')
           +team('Francis Coady', 'Head of Marcoms')
 
         .team-controls
@@ -96,9 +98,10 @@ block content
       div
         h1.section-heading Meet our advisors
         ul.team-members.advisors
-          +team('Justin Babet', 'Advisor')
-          +team('Simon Fanshawe', 'Non-exec Director')
-          +team('David Gray', 'Channels/Partners Advisor')
+          +team('Justin Babet', 'TA/Branding Advisor', true)
+          +team('Simon Fanshawe', 'Non-exec Director', true)
+          +team('Luke Westland', 'Operations Advisor', true)
+          +team('David Gray', 'Channels/Partners Advisor', true)
 
         .team-controls
           a(href="#carousel")
