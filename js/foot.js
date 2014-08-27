@@ -69,7 +69,18 @@ if (retina.Retina.isRetina()) {
 
 $(function() {
   carousel();
-  return video();
+  video();
+  return $("[data-ga=click]").on('click', function() {
+    var $this, category, label;
+    $this = $(this);
+    category = $this.data('ga-category');
+    label = $this.data('ga-label');
+    if (typeof window.ga === !'undefined') {
+      return ga('send', 'event', category, 'Click', label);
+    } else {
+      return console.log(JSON.stringify($this.data(), null, ' '));
+    }
+  });
 });
 
 
