@@ -10,8 +10,7 @@
   "browserify-shim": {
     "jquery": "$",
     "froogaloop": "$f",
-    "modal": "CSSModal",
-    "retina": "Retina"
+    "modal": "CSSModal"
   },
   "browserify": {
     "transform": [

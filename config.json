@@ -9,7 +9,8 @@
     "wintersmith-stylus"
   ],
   "jade": {
-    "pretty": true
+    "pretty": true,
+    "basedir": "contents"
   },
   "ignore": [
     "**/.DS_Store",

@@ -14,6 +14,9 @@ html
   include partials/head
   body
     block content
+    <!--[if lt IE 9]>
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bean/1.0.14/bean.min.js")
+    <![endif]-->
     script(src="js/foot.js")
     <!--[if lt IE 9]>
     script(src="//cdn.jsdelivr.net/nwmatcher/1.2.5/nwmatcher.min.js")

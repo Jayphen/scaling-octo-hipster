@@ -2,7 +2,8 @@ extends layout
 
 block content
   != "<!--[if gt IE 8]><!-->"
-  include partials/svgstore.svg
+  div(style="display:none")
+    include /svg/svgstore.svg
   != "<!--<![endif]-->"
 
   section.hero

@@ -77,7 +77,7 @@ gulp.task 'styles', ['copy'], ->
 
 gulp.task 'js', ['copy'], ->
   gulp.src paths.scripts
-    .pipe uglify()
+    # .pipe uglify({ unused: false, mangle: false})
     .pipe gulp.dest "#{DIST_DIR}/js"
 
 gulp.task 'images', ['copy'], ->
