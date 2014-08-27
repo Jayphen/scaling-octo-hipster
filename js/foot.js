@@ -11,6 +11,7 @@ module.exports = function() {
   played = false;
   player = {};
   playVid = function() {
+    console.log("hello");
     video = $(CSSModal.activeElement).find('#hiw-vid').get(0);
     if (video) {
       player = $f(video);
