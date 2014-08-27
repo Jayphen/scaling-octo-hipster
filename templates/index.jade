@@ -71,49 +71,7 @@ block content
         li
           img(src="images/logos/#{name}")
 
-  mixin team(name, pos, advisory)
-    - var sanitisedName = name.toLowerCase().replace(/\s+/g, '')
-    - var url = advisory ? "http://peerbrief.com/advisory/" : "http://peerbrief.com/meet-the-team/"
-    li.team-member
-      a(href=url)
-        img(src="images/team/#{sanitisedName}.jpg")
-        .team-member-name!= name
-        .team-member-position!= pos
-
-  section.team
-
-    .team-carousel#carousel
-      div
-        h1.section-heading Meet the team
-        ul.team-members.core
-          +team('Rob Fanshawe', 'CEO')
-          +team('Kristian Kauper', 'CTO')
-          +team('Rajan Rauniyar', 'Back-end Developer')
-          +team('Gabriella Lagerstedt', 'Front-end Developer')
-          +team('Jayphen Simpson', 'UX/UI Design')
-          +team('Alex Kerr', 'Digital Consultant')
-          +team('Francis Coady', 'Head of Marcoms')
-
-        .team-controls
-          a(href="#carousel")
-            |Meet our advisors
-            svg
-              use(xlink:href="svg/svgstore.svg#icon-arrow")
-
-      div
-        h1.section-heading Meet our advisors
-        ul.team-members.advisors
-          +team('Justin Babet', 'TA/Branding Advisor', true)
-          +team('Simon Fanshawe', 'Non-exec Director', true)
-          +team('Luke Westland', 'Operations Advisor', true)
-          +team('David Gray', 'Channels/Partners Advisor', true)
-
-        .team-controls
-          a(href="#carousel")
-            |Meet the team
-            svg
-              use(xlink:href="svg/svgstore.svg#icon-arrow")
-
+  include partials/team
 
   section.partners
     h1.section-heading Our awesome partners
@@ -152,7 +110,6 @@ block content
           input(type="submit", value="Send")
 
   include partials/footer
-
   include partials/vid-modal
   include partials/invite
   include partials/employer-learn-more

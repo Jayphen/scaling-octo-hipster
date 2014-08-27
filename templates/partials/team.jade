@@ -1,0 +1,56 @@
+- var sanitisedName = function(name)
+  - return name.toLowerCase().replace(/\s+/g, '')
+
+include team/index
+
+mixin modal(name, header, position)
+  section.modal--show(tabindex="-1", role="dialog", aria-labelledby="modal-label", aria-hidden="true", class="modal-#{name}", id="modal-#{name}")
+    .modal-inner
+      header.modal-label
+        h2!= header
+      .modal-content
+        .team-modal-face
+          img(src="images/team/#{sanitisedName(name)}.jpg")
+          .team-modal-position!= position
+        .team-modal-blurb
+          +blurb(name)
+
+    a(href="#!", class="modal-close", data-close="Close" data-dismiss="modal") x
+
+mixin team(name, pos)
+  li.team-member
+    a(href="#modal-#{sanitisedName(name)}")
+      img(src="images/team/#{sanitisedName(name)}.jpg")
+      .team-member-name!= name
+      .team-member-position!= pos
+
+section.team
+  .team-carousel#carousel
+    div
+      h1.section-heading Meet the team
+      ul.team-members.core
+        each person in locals.team
+          +team(person.name, person.position)
+
+      .team-controls
+        a(href="#carousel")
+          |Meet our advisors
+          svg
+            use(xlink:href="svg/svgstore.svg#icon-arrow")
+
+    div
+      h1.section-heading Meet our advisors
+      ul.team-members.advisors
+        each person in locals.advisors
+          +team(person.name, person.position)
+
+      .team-controls
+        a(href="#carousel")
+          |Meet the team
+          svg
+            use(xlink:href="svg/svgstore.svg#icon-arrow")
+
+each person in locals.team
+  +modal(sanitisedName(person.name), person.name, person.position)
+each person in locals.advisors
+  +modal(sanitisedName(person.name), person.name, person.position)
