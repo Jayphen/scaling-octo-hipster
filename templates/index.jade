@@ -1,6 +1,10 @@
 extends layout
 
 block content
+  != "<!--[if gt IE 8]><!-->"
+  include partials/svgstore.svg
+  != "<!--<![endif]-->"
+
   section.hero
     nav.hero-nav
       .hero-logo

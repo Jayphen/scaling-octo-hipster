@@ -1,15 +1,28 @@
+CSSModal = require 'modal'
 require 'froogaloop'
 
 module.exports = ->
-  hiwVid = document.getElementById 'hiw-vid'
-  player = $f(hiwVid)
+  video = {}
+  played = false
+  player = {}
 
   playVid = ->
-    player.api 'play'
+    video = $(CSSModal.activeElement).find('#hiw-vid').get(0)
+    if video
+      player = $f(video)
+      player.api 'play'
+      played = true
 
   pauseVid = ->
-    player.api 'pause'
+    if played
+      player.api 'pause'
 
-  $('.hiw-vid a').bind 'click', ->
-    playVid()
-  $(document).on('cssmodal:hide', pauseVid)
+  init = (modal) ->
+    CSSModal = modal
+    CSSModal.init()
+
+    CSSModal.on 'cssmodal:show', document, playVid
+    CSSModal.on 'cssmodal:hide', document, pauseVid
+
+  $ ->
+    init(CSSModal)

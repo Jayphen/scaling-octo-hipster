@@ -1,9 +1,8 @@
 require 'jquery'
 video = require './autoplayVideo'
-CSSModal = require 'modal'
 require 'carousel'
 carousel = require './carouselInit'
-chosen = require 'chosen'
+# chosen = require 'chosen'
 retina = require 'retina'
 
 if retina.Retina.isRetina()

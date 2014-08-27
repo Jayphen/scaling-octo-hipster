@@ -9,7 +9,9 @@
   },
   "browserify-shim": {
     "jquery": "$",
-    "froogaloop": "$f"
+    "froogaloop": "$f",
+    "modal": "CSSModal",
+    "retina": "Retina"
   },
   "browserify": {
     "transform": [

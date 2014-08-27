@@ -88,7 +88,7 @@ gulp.task 'images', ['copy'], ->
 
 gulp.task 'svg', ->
   gulp.src "#{paths.svg.prebuild}/*.svg"
-    .pipe svgmin()
+    # .pipe svgmin()
     .pipe svgstore({ prefix: 'icon-', inlineSvg: true })
     .pipe gulp.dest paths.svg.build
 
