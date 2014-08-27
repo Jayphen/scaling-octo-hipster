@@ -11,7 +11,6 @@ module.exports = function() {
   played = false;
   player = {};
   playVid = function() {
-    console.log("hello");
     video = $(CSSModal.activeElement).find('#hiw-vid').get(0);
     if (video) {
       player = $f(video);
@@ -12320,8 +12319,6 @@ if (typeof Object.create !== "function") {
     };
 }(jQuery, window, document));
 },{}],7:[function(require,module,exports){
-(function (global){
-;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 (function() {
     var root = (typeof exports === 'undefined' ? window : exports);
     var config = {
@@ -12362,7 +12359,6 @@ if (typeof Object.create !== "function") {
 
         context.onload = function() {
             var images = document.getElementsByTagName('img'), retinaImages = [], i, image;
-            console.log('hello I am working');
             for (i = 0; i < images.length; i += 1) {
                 image = images[i];
                 if (!!!image.getAttributeNode('data-no-retina')) {
@@ -12496,11 +12492,6 @@ if (typeof Object.create !== "function") {
     }
 })();
 
-; browserify_shim__define__module__export__(typeof Retina != "undefined" ? Retina : window.Retina);
-
-}).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
-
-}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],8:[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
