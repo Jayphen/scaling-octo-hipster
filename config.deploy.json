@@ -1,7 +1,22 @@
 {
   "locals": {
     "title": "PeerBrief: Everyone's a headhunter",
-    "basePath": ""
+    "basePath": "",
+    "team": [
+      {"name":"Rob Fanshawe", "position":"CEO"},
+      {"name":"Kristian Kauper", "position":"CTO"},
+      {"name":"Rajan Rauniyar", "position":"Back-end Developer"},
+      {"name":"Gabriella Lagerstedt", "position":"Front-end Developer"},
+      {"name":"Jayphen Simpson", "position":"UX/UI Design"},
+      {"name":"Alex Kerr", "position":"Digital Consultant"},
+      {"name":"Francis Coady", "position":"Head of Marcoms"}
+    ],
+    "advisors": [
+      {"name": "Justin Babet", "position":"TA/Branding Advisor"},
+      {"name": "Simon Fanshawe", "position":"Non-exec Director"},
+      {"name": "Luke Westland", "position":"Operations Advisor"},
+      {"name": "David Gray", "position":"Channels/Partners Advisor"}
+    ]
   },
   "plugins": [
     "wintersmith-livereload",

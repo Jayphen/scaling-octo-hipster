@@ -11,3 +11,12 @@ if retina.Retina.isRetina()
 $ ->
   carousel()
   video()
+
+  $("[data-ga=click]").on 'click', ->
+    $this = $(this)
+    category = $this.data('ga-category')
+    label = $this.data('ga-label')
+    if typeof(window.ga) is not 'undefined'
+      ga('send', 'event', category, 'Click', label)
+    else
+      console.log JSON.stringify $this.data(), null, ' '

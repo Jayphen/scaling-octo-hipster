@@ -19,7 +19,7 @@ mixin modal(name, header, position)
 
 mixin team(name, pos)
   li.team-member
-    a(href="#modal-#{sanitisedName(name)}")
+    a(href="#modal-#{sanitisedName(name)}", data-ga="click", data-ga-category="Team member", data-ga-label="#{name}")
       img(src="images/team/#{sanitisedName(name)}.jpg")
       .team-member-name!= name
       .team-member-position!= pos
