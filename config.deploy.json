@@ -16,7 +16,8 @@
       {"name": "Simon Fanshawe", "position":"Non-exec Director"},
       {"name": "Luke Westland", "position":"Operations Advisor"},
       {"name": "David Gray", "position":"Channels/Partners Advisor"}
-    ]
+    ],
+    "analytics": "UA-50029273-3"
   },
   "plugins": [
     "wintersmith-livereload",
