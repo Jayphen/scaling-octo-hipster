@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5
+  text-transform: uppercase
+  letter-spacing: 0.05em
+  color: black
+  trailer: 0
+  font-weight: 500
+
+  &:not(.section-heading) + p
+    leader: 0
+
+h1
+  adjust-font-size-to: xxl, 3
+  leader: 0
+
+h2
+  adjust-font-size-to: xl, 1.5
+  leader: 1.5, xl
+  trailer: 0.5, xl
+
+  &.section-heading
+    hd-underline(size: xl)
+
+h3
+  adjust-font-size-to: m, 1
+  leader: 1, m
+  trailer: 0.5, m
+
+  &.section-heading
+    hd-underline(size: m)
+
+h4
+  adjust-font-size-to: xs, 1
+  leader: 1, xs
+  font-weight: 700
+  letter-spacing: 0.05em
+
+  &.section-heading
+    hd-underline(size: xs)
+
+p
+  adjust-font-size-to: m, 1
+  leader: 0
+  trailer: 1
+
+  div > &:first-child,
+  section > &:first-child
+    leader: 0
+
+.section-heading
+  margin-top: 0

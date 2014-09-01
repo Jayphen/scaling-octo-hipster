@@ -2,12 +2,11 @@
   border: none
   text-align: center
   padding-leader: 1
-  h2
-    text-transform: uppercase
-    adjust-font-size-to: 14px, 1
-    letter-spacing: 0.05em
-    font-weight: 500
+
+  > h2
+    adjust-font-size-to: m, 1
     text-align: center
+    margin-top: 0
 
 .modal--show
   transition: all 0.5s
@@ -18,13 +17,15 @@
     border-radius: 3px
 
   .modal-close:after
-    top: -rhythm(2)
+    top: -rhythm(2, 12px)
 
   .modal-content
     border: 0
+    rhythm: 1 0 1 0
 
   +below(30em)
-    header, .modal-content
+    header,
+    .modal-content
       border: 0
 
     &:before

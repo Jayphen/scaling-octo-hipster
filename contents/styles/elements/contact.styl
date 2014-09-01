@@ -5,8 +5,8 @@
   padding-trailer: 3
   text-align: center
 
-  h1
-    hd-underline(white)
+  h3.section-heading
+    hd-underline(white, m)
 
   svg
     width: 400px
@@ -48,7 +48,7 @@
     font-weight: 500
 
   span
-    adjust-font-size-to: 20px, 1.5
+    adjust-font-size-to: l
     font-weight: 300
     color: alpha(white, 70%)
 
@@ -68,17 +68,21 @@
     border-radius: 3px
     border: 0
     width: 100%
-    adjust-leading-to: 1.5
+    color: white
     padding: 0 0.5em
+    rhythm: 0, 0.25, 0.25, 0
 
   input[type="submit"]
     btn-secondary(white, blue)
     span(1/2, offset: 1/2)
-    adjust-font-size-to: 18px, 0.5
+    adjust-font-size-to: m
 
 // Abstract this out
 .fields
-  trailer(1)
+  leader: 0.5
+
+  form > &:first-of-type
+    leader: 0
 
   label
     display: block

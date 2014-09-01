@@ -1,23 +1,22 @@
 // How it works section
 .hiw
+  center(grid-width)
   rhythm: 2 2 0 0
   background: white
-  // edit()
 
   // Reduce module size for tablet and below
   +below(600px)
     adjust-font-size-to: 14px
     center(600px)
 
-.hiw-title
-  adjust-font-size-to: 36px, 1.5
-  color: #329BE2
+.hiw .section-heading
+  adjust-font-size-to: xl
   letter-spacing: 0.06em
   text-transform: uppercase
   text-align: center
-  trailer: 2, 36px
+  trailer: 2, xl
 
-  hd-underline(size: 36px)
+  hd-underline(blue, 36px)
 
 .hiw-vid
   text-align: center
@@ -28,7 +27,7 @@
 
 .hiw-referrer
   font-weight: 300
-  adjust-font-size-to: 20px, 1.4
+  adjust-font-size-to: l, 1.25
   letter-spacing: 0.06em
   center(grid-width)
 

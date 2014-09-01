@@ -5,18 +5,18 @@ head
   | !{ livereloadScript}
   <!--<![endif]-->
   if env.mode == 'preview'
-    link(rel="stylesheet", href="vendor/css-modal/build/modal.css")
-    link(rel="stylesheet", href="vendor/owl-carousel/owl-carousel/owl.carousel.css")
-    link(rel="stylesheet", href="vendor/owl-carousel/owl-carousel/owl.transitions.css")
-    link(rel="stylesheet", href="vendor/chosen_v1.1.0/chosen.css")
-  link(rel="stylesheet", href="styles/main.css")
+    link(rel="stylesheet", href="/vendor/css-modal/build/modal.css")
+    link(rel="stylesheet", href="/vendor/owl-carousel/owl-carousel/owl.carousel.css")
+    link(rel="stylesheet", href="/vendor/owl-carousel/owl-carousel/owl.transitions.css")
+    link(rel="stylesheet", href="/vendor/chosen_v1.1.0/chosen.css")
+  link(rel="stylesheet", href="/styles/main.css")
   <!--[if lt IE 9]>
   if env.mode == 'preview'
-    script(src="vendor/html5shiv/dist/html5shiv.min.js")
-    script(src="vendor/svg4everybody/svg4everybody.ie8.min.js")
+    script(src="/vendor/html5shiv/dist/html5shiv.min.js")
+    script(src="/vendor/svg4everybody/svg4everybody.ie8.min.js")
   else
-    script(src="js/html5shiv.min.js")
-    script(src="js/svg4everybody.ie8.min.js")
+    script(src="/js/html5shiv.min.js")
+    script(src="/js/svg4everybody.ie8.min.js")
   <![endif]-->
   unless env.mode == 'preview'
     link(rel="stylesheet", href="//cloud.typography.com/6530072/651564/css/fonts.css")

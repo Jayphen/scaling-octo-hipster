@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  nav.primary-nav
+    .primary-nav-inner
+      svg
+        use(xlink:href="/svg/svgstore.svg#icon-logo")
+
+  .styleguide
+
+    aside.styleguide-nav
+      ul
+        li.active
+          a(href="#") hello
+        li
+          a(href="#") there
+        li
+          a(href="#") again
+
+    section.styleguide-body
+      :markdown
+        # Heading style one
+
+        **Only to be used once on a page.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        **This is some sample paragraph text for margin display testing.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        ## Heading style two
+
+        **This is some sample paragraph text for margin display testing.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        ### Heading style three
+
+        **This is some sample paragraph text for margin display testing.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        #### Heading style four
+
+        **This is some sample paragraph text for margin display testing.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        * Responsive grid down to mobile
+        * Semantic class naming and markup
+        * Typography set to 24px baseline grid
+
+      section.heading-variants
+        h2.section-heading Heading style two variant
+
+        :markdown
+          **This is some sample paragraph text for margin display testing.** Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+

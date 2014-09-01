@@ -26,7 +26,7 @@ block content
           use(xlink:href="svg/svgstore.svg#icon-arrow")
 
   section.hiw
-    h1.hiw-title How does it work?
+    h2.section-heading How does it work?
 
     .hiw-vid
       a(href="#vid-modal")
@@ -57,7 +57,7 @@ block content
       //- a.hiw-learn-more(href="https://peerbrief.zendesk.com/hc/en-us/sections/200345640-Referrer") Want to learn more?
 
   section.employers
-    h1.section-heading For employers
+    h3.section-heading For employers
     p Use the power of crowdsourcing to find your staff. It's free to join and it's free to post jobs! <a href="#employer-lm">Learn more</a>
 
     .employer-cta
@@ -65,7 +65,7 @@ block content
       .employer-learn-more You can also use PeerBrief to <a href="http://peerbrief.com/enterprise/">supercharge your internal referral programme.</a>
 
   section.seen-on
-    h1.section-heading As seen on
+    h3.section-heading As seen on
     ul.seen-on-list
       each name in ['skynews-logo.png', 'afr-logo.png', 'brw-logo.png', 'smh-logo.png', 'startupsmart-logo.png']
         li
@@ -74,7 +74,7 @@ block content
   include partials/team
 
   section.partners
-    h1.section-heading Our awesome partners
+    h3.section-heading Our awesome partners
 
     ul.partner-logos
       each name in ['33talent-logo.png', 'jobadvisor-logo.png', 'mycause-logo.png', 'redballoon-logo.png']
@@ -83,7 +83,7 @@ block content
 
   section.contact
     .contact-inner
-      h1.section-heading Contact us
+      h3.section-heading Contact us
 
       .location
         img(src="images/map.png")
@@ -96,18 +96,19 @@ block content
           span P. +61 (0)2 8003 3186
 
       .contact-form
-        .fields
-          label(for="your-name") Your name
-          input(type="text")
-        .fields
-          label(for="your-email") Email
-          input(type="email")
-        .fields
-          label(for="message") What would you like to say?
-          textarea(rows="3")
+        form
+          .fields
+            label(for="your-name") Your name
+            input(type="text")
+          .fields
+            label(for="your-email") Email
+            input(type="email")
+          .fields
+            label(for="message") What would you like to say?
+            textarea(rows="3")
 
-        .fields
-          input(type="submit", value="Send")
+          .fields
+            input(type="submit", value="Send")
 
   include partials/footer
   include partials/vid-modal

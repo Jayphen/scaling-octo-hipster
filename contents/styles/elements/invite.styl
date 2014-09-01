@@ -1,6 +1,4 @@
 .invite-modal
-  adjust-font-size-to: 16px, 1.5
-
   .modal-inner
     background: blue
     color: white
@@ -9,25 +7,27 @@
     &:after
       background: transparent
       btn-secondary(blue, white)
+      padding: 0 2em
 
       +below(30em)
         btn-secondary(alpha(white, 60%), blue)
         adjust-font-size-to: 12px, 0.5
 
+  form
+    leader: 0.5
+
   label
     color: lighten(blue, 60%)
 
   .modal-label h2
-    adjust-font-size-to: 18px
-    font-weight: 500
-    letter-spacing: 0.1em
     hd-underline(white)
 
   input
     background: shade(blue, 30%)
+    color: white
     border: 0
-    adjust-font-size-to: 14px
-    rhythm: 0, 0.25, 0.25, 0, 14px
+    adjust-font-size-to: s
+    rhythm: 0, 0.25, 0.25, 0, s
     width: 100%
     padding-left: 0.5em
     padding-right: 0.5em

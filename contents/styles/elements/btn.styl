@@ -3,14 +3,18 @@ btn-shared(weight=500)
   text-decoration: none
   cursor: pointer
   font-weight: weight
-  adjust-font-size-to: 14px
+  adjust-font-size-to: s
   text-transform: uppercase
   border-radius: 3px
   display: inline-block
   transition: all 0.2s
+  padding-leader: 0.5, s
+  padding-trailer: 0.5, s
+  padding-left: 1em
+  padding-right: 1em
 
   svg
-    height: -rhythm(0.45, 14px)
+    height: -rhythm(0.45, s)
     line-height: 0
     vertical-align: baseline
     display: inline-block
@@ -18,18 +22,18 @@ btn-shared(weight=500)
 
 btn(color=blue)
   btn-shared()
-  padding: 1em
   color: white
   background: color
-  adjust-font-size-to: 18px
-  letter-spacing: 0.08em
+  adjust-font-size-to: m
+  padding-leader: 0.5, m
+  padding-trailer: 0.5, m
+  letter-spacing: 0.1em
   &:hover
     color: white
     background: darken(color, 20%)
 
 btn-secondary(background=silver, color=grey, alpha = false)
   btn-shared()
-  padding: 1em 1.5em
   background: background
   color: color
   &:hover

@@ -23,7 +23,8 @@
   "plugins": [
     "wintersmith-livereload",
     "wintersmith-browserify",
-    "wintersmith-stylus"
+    "wintersmith-stylus",
+    "wintersmith-pandoc"
   ],
   "jade": {
     "basedir": "contents"

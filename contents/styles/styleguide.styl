@@ -1,0 +1,52 @@
+.styleguide
+  center(960px)
+
+.heading-variants
+  leader: 2
+
+.styleguide-nav
+  col(1/4)
+
+  ul
+    border-radius: 3px
+    list-style: none
+    leader: 0.5
+    padding: 0
+    border: 1px solid silver
+
+  li
+    adjust-font-size-to: s
+    trailing-border: 1px, 0.25, s
+    border-color: silver
+    padding-leader: 0.25, s
+
+    &:last-of-type
+      border-bottom: 0
+
+  a
+    display: block
+    border-left: 4px solid transparent
+    padding-left: 1em
+    text-decoration: none
+
+    &:hover
+      border-color: silver
+
+  .active a
+    border-color: melon
+    color: font-color
+
+.styleguide-body
+  col(3/4)
+
+// Refactor
+.primary-nav
+  background: blue
+  trailer: 1
+
+.primary-nav-inner
+  center(960px)
+
+  svg
+    width: 150px
+    height: -rhythm(3)
