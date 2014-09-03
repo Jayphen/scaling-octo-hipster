@@ -1,15 +1,15 @@
 head
   meta(charset='utf-8')
   meta(content='width=device-width, initial-scale=1, maximum-scale=1', name='viewport')
-  <!--[if !IE]><!-->
-  | !{ livereloadScript}
-  <!--<![endif]-->
   if env.mode == 'preview'
+    <!--[if !IE]><!-->
+    | !{ livereloadScript}
+    <!--<![endif]-->
     link(rel="stylesheet", href="/vendor/css-modal/build/modal.css")
     link(rel="stylesheet", href="/vendor/owl-carousel/owl-carousel/owl.carousel.css")
     link(rel="stylesheet", href="/vendor/owl-carousel/owl-carousel/owl.transitions.css")
     link(rel="stylesheet", href="/vendor/chosen_v1.1.0/chosen.css")
-  link(rel="stylesheet", href="/styles/main.css")
+  link(rel="stylesheet", href="#{locals.basePath}/styles/main.css")
   <!--[if lt IE 9]>
   if env.mode == 'preview'
     script(src="/vendor/html5shiv/dist/html5shiv.min.js")

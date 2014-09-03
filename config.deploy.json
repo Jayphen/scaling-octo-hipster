@@ -1,7 +1,7 @@
 {
   "locals": {
     "title": "PeerBrief: Everyone's a headhunter",
-    "basePath": "",
+    "basePath": "/new",
     "team": [
       {"name":"Rob Fanshawe", "position":"CEO"},
       {"name":"Kristian Kauper", "position":"CTO"},
@@ -23,10 +23,10 @@
   "plugins": [
     "wintersmith-livereload",
     "wintersmith-browserify",
-    "wintersmith-stylus",
-    "wintersmith-pandoc"
+    "wintersmith-stylus"
   ],
   "jade": {
+    "pretty": true,
     "basedir": "contents"
   },
   "ignore": [

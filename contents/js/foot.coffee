@@ -3,7 +3,7 @@ video = require './autoplayVideo'
 require 'carousel'
 carousel = require './carouselInit'
 retina = require 'retina'
-# chosen = require 'chosen'
+invitationForm = require './invitation'
 
 if retina.Retina.isRetina()
   retina.Retina.init(window)
@@ -11,6 +11,7 @@ if retina.Retina.isRetina()
 $ ->
   carousel()
   video()
+  invitationForm()
 
   $("[data-ga=click]").on 'click', ->
     $this = $(this)
